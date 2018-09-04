@@ -4,7 +4,7 @@ from .forms import CommentForm
 import logging
 
 def list_comments(request):
-    comments = Comment.objects.all()
+    comments = Comment.objects.all().order_by("date").reverse()
     return render(request, 'Comment/comment_list.html', { 'comments': comments })
 
 def create_comment(request):
@@ -13,8 +13,9 @@ def create_comment(request):
 
     if form.is_valid():
         ip = request.META['REMOTE_ADDR']
-        form.author_ip = ip
-        form.save()
+        obj = form.save(commit=False)
+        obj.author_ip = ip
+        obj.save()
         return redirect('list_comments')
     
     return render(request, 'Comment/comments-form.html', { 'form': form })
