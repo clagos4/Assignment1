@@ -19,6 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage),
-    path('comments/', include('Comment.urls')),
+    path('', include('Comment.urls')),
 ]
