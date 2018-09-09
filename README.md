@@ -4,6 +4,7 @@ En este trabajo, tengo que hacer una especie de blog donde todo usuario pueda in
 Para este trabajo visite los siguientes videos:
 ## Para aprender Django
 [Introduction to Django](https://www.youtube.com/watch?v=LAIVhl2CG8E&index=17&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc)
+
 [CRUD Django](https://www.youtube.com/watch?v=Kf9KB_TZY5U)
     
 En ambos dos se especifica muy bien como hacer una aplicación web usando Django.
