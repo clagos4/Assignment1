@@ -12,7 +12,7 @@ def create_comment(request):
     form = CommentForm(request.POST or None)
 
     if form.is_valid():
-        ip = request.META['REMOTE_ADDR']
+        ip = request.environ['REMOTE_ADDR']
         obj = form.save(commit=False)
         obj.author_ip = ip
         obj.save()
